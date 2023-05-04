@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="test_bench_revise1_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="test_bench_revise1" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="82200000fs"></ZoomStartTime>
+      <ZoomEndTime time="249000001fs"></ZoomEndTime>
+      <Cursor1Time time="107400000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="253"></NameColumnWidth>
+      <ValueColumnWidth column_width="175"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="30" />
+   <wvobject fp_name="/test_bench_revise1/axi_stream_insert_header_inst/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench_revise1/axi_stream_insert_header_inst/rst_n" type="logic">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench_revise1/axi_stream_insert_header_inst/valid_in" type="logic">
+      <obj_property name="ElementShortName">valid_in</obj_property>
+      <obj_property name="ObjectShortName">valid_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench_revise1/axi_stream_insert_header_inst/data_in" type="array">
+      <obj_property name="ElementShortName">data_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_in[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench_revise1/axi_stream_insert_header_inst/keep_in" type="array">
+      <obj_property name="ElementShortName">keep_in[3:0]</obj_property>
+      <obj_property name="ObjectShortName">keep_in[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench_revise1/axi_stream_insert_header_inst/last_in" type="logic">
+      <obj_property name="ElementShortName">last_in</obj_property>
+      <obj_property name="ObjectShortName">last_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench_revise1/axi_stream_insert_header_inst/ready_in" type="logic">
+      <obj_property name="ElementShortName">ready_in</obj_property>
+      <obj_property name="ObjectShortName">ready_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench_revise1/axi_stream_insert_header_inst/valid_out" type="logic">
+      <obj_property name="ElementShortName">valid_out</obj_property>
+      <obj_property name="ObjectShortName">valid_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench_revise1/axi_stream_insert_header_inst/data_out" type="array">
+      <obj_property name="ElementShortName">data_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_out[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench_revise1/axi_stream_insert_header_inst/keep_out" type="array">
+      <obj_property name="ElementShortName">keep_out[3:0]</obj_property>
+      <obj_property name="ObjectShortName">keep_out[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench_revise1/axi_stream_insert_header_inst/last_out" type="logic">
+      <obj_property name="ElementShortName">last_out</obj_property>
+      <obj_property name="ObjectShortName">last_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench_revise1/axi_stream_insert_header_inst/ready_out" type="logic">
+      <obj_property name="ElementShortName">ready_out</obj_property>
+      <obj_property name="ObjectShortName">ready_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench_revise1/axi_stream_insert_header_inst/valid_insert" type="logic">
+      <obj_property name="ElementShortName">valid_insert</obj_property>
+      <obj_property name="ObjectShortName">valid_insert</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench_revise1/axi_stream_insert_header_inst/data_insert" type="array">
+      <obj_property name="ElementShortName">data_insert[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_insert[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench_revise1/axi_stream_insert_header_inst/keep_insert" type="array">
+      <obj_property name="ElementShortName">keep_insert[3:0]</obj_property>
+      <obj_property name="ObjectShortName">keep_insert[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench_revise1/axi_stream_insert_header_inst/byte_insert_cnt" type="array">
+      <obj_property name="ElementShortName">byte_insert_cnt[1:0]</obj_property>
+      <obj_property name="ObjectShortName">byte_insert_cnt[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench_revise1/axi_stream_insert_header_inst/ready_insert" type="logic">
+      <obj_property name="ElementShortName">ready_insert</obj_property>
+      <obj_property name="ObjectShortName">ready_insert</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench_revise1/axi_stream_insert_header_inst/header_captured" type="logic">
+      <obj_property name="ElementShortName">header_captured</obj_property>
+      <obj_property name="ObjectShortName">header_captured</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench_revise1/axi_stream_insert_header_inst/data_cache" type="array">
+      <obj_property name="ElementShortName">data_cache[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_cache[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench_revise1/axi_stream_insert_header_inst/keep_in_cache" type="array">
+      <obj_property name="ElementShortName">keep_in_cache[3:0]</obj_property>
+      <obj_property name="ObjectShortName">keep_in_cache[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench_revise1/axi_stream_insert_header_inst/byte_insert_cnt_reg" type="array">
+      <obj_property name="ElementShortName">byte_insert_cnt_reg[1:0]</obj_property>
+      <obj_property name="ObjectShortName">byte_insert_cnt_reg[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench_revise1/axi_stream_insert_header_inst/header_valid_bit" type="array">
+      <obj_property name="ElementShortName">header_valid_bit[4:0]</obj_property>
+      <obj_property name="ObjectShortName">header_valid_bit[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench_revise1/axi_stream_insert_header_inst/last_in_d1" type="logic">
+      <obj_property name="ElementShortName">last_in_d1</obj_property>
+      <obj_property name="ObjectShortName">last_in_d1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench_revise1/axi_stream_insert_header_inst/last_out_d1" type="logic">
+      <obj_property name="ElementShortName">last_out_d1</obj_property>
+      <obj_property name="ObjectShortName">last_out_d1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench_revise1/axi_stream_insert_header_inst/keep_in_real" type="array">
+      <obj_property name="ElementShortName">keep_in_real[3:0]</obj_property>
+      <obj_property name="ObjectShortName">keep_in_real[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench_revise1/axi_stream_insert_header_inst/cnst" type="array">
+      <obj_property name="ElementShortName">cnst[3:0]</obj_property>
+      <obj_property name="ObjectShortName">cnst[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench_revise1/axi_stream_insert_header_inst/DATA_WD" type="array">
+      <obj_property name="ElementShortName">DATA_WD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DATA_WD[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench_revise1/axi_stream_insert_header_inst/DATA_BYTE_WD" type="array">
+      <obj_property name="ElementShortName">DATA_BYTE_WD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DATA_BYTE_WD[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench_revise1/axi_stream_insert_header_inst/BYTE_CNT_WD" type="array">
+      <obj_property name="ElementShortName">BYTE_CNT_WD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">BYTE_CNT_WD[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_bench_revise1/axi_stream_insert_header_inst/BIT_CNT_DATA" type="array">
+      <obj_property name="ElementShortName">BIT_CNT_DATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">BIT_CNT_DATA[31:0]</obj_property>
+   </wvobject>
+</wave_config>
