@@ -1,5 +1,20 @@
 `timescale 1ns / 1ps
 
+// 主要修改内容：
+/*
+1、由于valid_out依赖于输入握手信号，而要求逐级反压，因此输入握手
+   信号受限于输出握手信号，不可避免产生逻辑环路，因此将valid_out
+   的组合逻辑改为时序电路；
+   
+2、为了避免产生气泡，在last_in和last_out之间的时间段内（dual time）
+   将同时输出数据尾和捕获下一段数据的数据头，data_cache产生矛盾，
+   因此分别例化了data_in的cache和data_insert的cache；keep信号和
+   byte_insert_cnt信号同理，并采用head_added区别使用哪个cache；
+   
+3、test bench增加了ready out的随机化，增加了自动测试程序，能输出
+   每次测试的输入输出结果，测试次数由cnt_test_num_max控制
+*/
+
 module axi_stream_insert_header 
 #(
   parameter DATA_WD = 32,
