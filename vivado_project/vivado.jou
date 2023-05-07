@@ -2,15 +2,300 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Thu May  4 19:49:58 2023
-# Process ID: 3160
+# Start of session at: Sat May  6 13:17:04 2023
+# Process ID: 5600
 # Current directory: D:/github_repo/axi_stream_insert_header/vivado_project
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10108 D:\github_repo\axi_stream_insert_header\vivado_project\axi_stream_insert_header.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13228 D:\github_repo\axi_stream_insert_header\vivado_project\axi_stream_insert_header.xpr
 # Log file: D:/github_repo/axi_stream_insert_header/vivado_project/vivado.log
 # Journal file: D:/github_repo/axi_stream_insert_header/vivado_project\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.xpr
 update_compile_order -fileset sources_1
-export_ip_user_files -of_objects  [get_files D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sim_1/new/test_bench.v] -no_script -reset -force -quiet
-remove_files  -fileset sim_1 D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sim_1/new/test_bench.v
+launch_simulation
+launch_simulation
+launch_simulation
+source test_bench_revise1.tcl
+close_sim
+launch_simulation
+source test_bench_revise1.tcl
+current_wave_config {Untitled 2}
+add_wave {{/test_bench_revise1/axi_stream_insert_header_inst}} 
+run 1 us
+restart
+run 1 us
+save_wave_config {D:/github_repo/axi_stream_insert_header/vivado_project/test_bench_revise1_behav.wcfg}
+close_sim
+launch_simulation
+source test_bench_revise1.tcl
+restart
+current_wave_config {Untitled 3}
+add_wave {{/test_bench_revise1/axi_stream_insert_header_inst}} 
+run 1 us
+run 1 us
+current_wave_config {Untitled 3}
+add_wave {{/test_bench_revise1/axi_stream_insert_header_inst}} 
+current_wave_config {Untitled 3}
+add_wave {{/test_bench_revise1}} 
+close_sim
+launch_simulation
+source test_bench_revise1.tcl
+run 1 us
+close_sim
+launch_simulation
+source test_bench_revise1.tcl
+run 1 us
+close_sim
+launch_simulation
+source test_bench_revise1.tcl
+run 1 us
+run 1.5 us
+restart
+run 1.5 us
+current_wave_config {Untitled 6}
+add_wave {{/test_bench_revise1/axi_stream_insert_header_inst}} 
+restart
+run 1.5 us
+close_sim
+launch_simulation
+source test_bench_revise1.tcl
+current_wave_config {Untitled 7}
+add_wave {{/test_bench_revise1/axi_stream_insert_header_inst}} 
+restart
+run 1.5 us
+close_sim
+launch_simulation
+source test_bench_revise1.tcl
+current_wave_config {Untitled 8}
+add_wave {{/test_bench_revise1/axi_stream_insert_header_inst}} 
+restart
+run 1.5 us
+close_sim
+launch_simulation
+launch_simulation
+launch_simulation
+source test_bench_revise1.tcl
+restart
+current_wave_config {Untitled 9}
+add_wave {{/test_bench_revise1/axi_stream_insert_header_inst}} 
+run 1.5 us
+close_sim
+launch_simulation
+source test_bench_revise1.tcl
+restart
+current_wave_config {Untitled 10}
+add_wave {{/test_bench_revise1/axi_stream_insert_header_inst}} 
+run 1.5 us
+close_sim
+launch_simulation
+source test_bench_revise1.tcl
+current_wave_config {Untitled 11}
+add_wave {{/test_bench_revise1/axi_stream_insert_header_inst}} 
+restart
+run 1.5 us
+close_sim
+launch_simulation
+launch_simulation
+source test_bench_revise1.tcl
+current_wave_config {Untitled 12}
+add_wave {{/test_bench_revise1/axi_stream_insert_header_inst}} 
+restart
+run 1.5 us
+close_sim
+launch_simulation
+source test_bench_revise1.tcl
+restart
+current_wave_config {Untitled 13}
+add_wave {{/test_bench_revise1/axi_stream_insert_header_inst}} 
+run 1.5 us
+close_sim
+launch_simulation
+launch_simulation
+source test_bench_revise1.tcl
+current_wave_config {Untitled 14}
+add_wave {{/test_bench_revise1/axi_stream_insert_header_inst}} 
+restart
+run 1.5 us
+save_wave_config {D:/github_repo/axi_stream_insert_header/vivado_project/test_bench_revise1_behav.wcfg}
+run 1.5 us
+restart
+run 1.5 us
+create_wave_config; add_wave /; set_property needs_save false [current_wave_config]
+current_wave_config {Untitled 15}
+add_wave {{/test_bench_revise1/axi_stream_insert_header_inst}} 
+close_sim
+launch_simulation
+source test_bench_revise1.tcl
+current_wave_config {Untitled 16}
+add_wave {{/test_bench_revise1/axi_stream_insert_header_inst}} 
+restart
+run 1.5 us
+close_sim
+launch_simulation
+source test_bench_revise1.tcl
+current_wave_config {Untitled 17}
+add_wave {{/test_bench_revise1/axi_stream_insert_header_inst}} 
+run 1.5 us
+restart
+run 1.5 us
+close_sim
+launch_simulation
+source test_bench_revise1.tcl
+restart
+current_wave_config {Untitled 18}
+add_wave {{/test_bench_revise1/axi_stream_insert_header_inst}} 
+run 1.5 us
+close_sim
+launch_simulation
+source test_bench_revise1.tcl
+run 1.5 us
+restart
+current_wave_config {Untitled 19}
+add_wave {{/test_bench_revise1/axi_stream_insert_header_inst}} 
+run 1.5 us
+close_sim
+launch_simulation
+source test_bench_revise1.tcl
+restart
+current_wave_config {Untitled 20}
+add_wave {{/test_bench_revise1/axi_stream_insert_header_inst}} 
+run 1.5 us
+close_sim
+launch_simulation
+source test_bench_revise1.tcl
+restart
+current_wave_config {Untitled 21}
+add_wave {{/test_bench_revise1/axi_stream_insert_header_inst}} 
+run 1.5 us
+close_sim
+launch_simulation
+launch_simulation
+source test_bench_revise1.tcl
+current_wave_config {Untitled 22}
+add_wave {{/test_bench_revise1/axi_stream_insert_header_inst}} 
+restart
+run 1.5 us
+close_sim
+launch_simulation
+source test_bench_revise1.tcl
+restart
+current_wave_config {Untitled 23}
+add_wave {{/test_bench_revise1/axi_stream_insert_header_inst}} 
+run 1.5 us
+close_sim
+launch_simulation
+source test_bench_revise1.tcl
+restart
+current_wave_config {Untitled 24}
+add_wave {{/test_bench_revise1/axi_stream_insert_header_inst}} 
+run 1.5 us
+close_sim
+launch_simulation
+source test_bench_revise1.tcl
+restart
+current_wave_config {Untitled 25}
+add_wave {{/test_bench_revise1/axi_stream_insert_header_inst}} 
+run 1.5 us
+run 1.5 us
+close_sim
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+launch_simulation
+launch_simulation
+source test_bench_revise1.tcl
+run 1.5 us
+run 1.5 us
+run 1.5 us
+run 1.5 us
+close_sim
+launch_simulation
+launch_simulation
+source test_bench_revise1.tcl
+run 1.5 us
+run 1.5 us
+close_sim
+launch_simulation
+launch_simulation
+source test_bench_revise1.tcl
+run 1.5 us
+run 1.5 us
+run 1.5 us
+run 1.5 us
+run 1.5 us
+run 1.5 us
+close_sim
+launch_simulation
+launch_simulation
+source test_bench_revise1.tcl
+close_sim
+launch_simulation
+source test_bench_revise1.tcl
+run 1.5 us
+run 1.5 us
+close_sim
+launch_simulation
+source test_bench_revise1.tcl
+close_sim
+launch_simulation
+source test_bench_revise1.tcl
+run 1.5 us
+run 1.5 us
+run 1.5 us
+run 1.5 us
+run 1.5 us
+run 1.5 us
+close_sim
+launch_simulation
+source test_bench_revise1.tcl
+run 1.5 us
+run 1.5 us
+close_sim
+launch_simulation
+launch_simulation
+source test_bench_revise1.tcl
+run 1.5 us
+run 1.5 us
+run 1.5 us
+run 1.5 us
+close_sim
+launch_simulation
+source test_bench_revise1.tcl
+run 1.5 us
+run 1.5 us
+run 1.5 us
+run 1.5 us
+close_sim
+launch_simulation
+source test_bench_revise1.tcl
+run 1.5 us
+run 1.5 us
+run 1.5 us
+run 1.5 us
+run 1.5 us
+run 1.5 us
+run 1.5 us
+close_sim
+launch_simulation
+source test_bench_revise1.tcl
+run 1.5 us
+run 1.5 us
+run 1.5 us
+run 1.5 us
+run 1.5 us
+run 1.5 us
+run 1.5 us
+run 1.5 us
+run 1.5 us
+run 1.5 us
+run 1.5 us
+run 1.5 us
+run 1.5 us
+close_sim
+launch_simulation
+source test_bench_revise1.tcl
+run all
+close_sim
+launch_simulation
+source test_bench_revise1.tcl
+run all
+close_sim
