@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon May  8 20:55:47 2023
+# Process ID: 824
+# Current directory: D:/github_repo/axi_stream_insert_header/vivado_project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16356 D:\github_repo\axi_stream_insert_header\vivado_project\axi_stream_insert_header.xpr
+# Log file: D:/github_repo/axi_stream_insert_header/vivado_project/vivado.log
+# Journal file: D:/github_repo/axi_stream_insert_header/vivado_project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP reopen_project: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 861.883 ; gain = 211.449
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon May  8 22:59:21 2023...
+ been returned to its previous state.
+INFO: [Common 17-344] 'open_project' was cancelled
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon May  8 20:56:07 2023...

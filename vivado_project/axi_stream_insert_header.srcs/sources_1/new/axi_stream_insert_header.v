@@ -1,19 +1,24 @@
 `timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: ChenYan
+// 
+// Create Date: 2023/04/25 15:34:58
+// Design Name: 
+// Module Name: axi_stream_insert_header
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
 
-// 主要修改内容：
-/*
-1、由于valid_out依赖于输入握手信号，而要求逐级反压，因此输入握手
-   信号受限于输出握手信号，不可避免产生逻辑环路，因此将valid_out
-   的组合逻辑改为时序电路；
-   
-2、为了避免产生气泡，在last_in和last_out之间的时间段内（dual time）
-   将同时输出数据尾和捕获下一段数据的数据头，data_cache产生矛盾，
-   因此分别例化了data_in的cache和data_insert的cache；keep信号和
-   byte_insert_cnt信号同理，并采用head_added区别使用哪个cache；
-   
-3、test bench增加了ready out的随机化，增加了自动测试程序，能输出
-   每次测试的输入输出结果，测试次数由cnt_test_num_max控制
-*/
 
 module axi_stream_insert_header 
 #(
@@ -44,127 +49,104 @@ module axi_stream_insert_header
   output ready_insert
 );
 
-localparam BIT_CNT_DATA = $clog2(DATA_WD)+1;
+// 握手信号
+wire shake_in = ready_in & valid_in;
+wire shake_insert = ready_insert & valid_insert;
+wire shake_out = ready_out & valid_out;
 
-reg valid_out, last_out, head_captured, head_added, dual_time, last_in_d1, shake_in_d1; 
-// head: 数据头的捕获、添加信号
-// dual_time: 在last_in,last_out之间(不含); 发送数据尾的同时接受下一段head; 不允许接受数据体
-reg [DATA_WD-1:0] data_in_cache, data_insert_cache, data_out;
-reg [DATA_BYTE_WD-1:0] keep_in_cache, keep_insert_cache, keep_out;
+// 1.数据头和数据体输入部分
+reg header_captured, header_added, data_stock, shake_in_d;
+reg [DATA_WD-1:0] data_in_reg, data_insert_reg;
+reg [2*DATA_WD-1:0] data_cache;
+reg [DATA_BYTE_WD-1:0] keep_in_reg, keep_insert_reg;
+reg [2*DATA_BYTE_WD-1:0] keep_cache;
 reg [BYTE_CNT_WD-1:0] byte_insert_cnt_reg, byte_insert_cnt_real;
 
-wire [BIT_CNT_DATA-1:0] header_valid_bit = byte_insert_cnt_real << 3; //header中有效数据的位宽
-wire shake_in, shake_out, shake_insert;
+assign ready_insert = ~header_captured;
+assign ready_in = header_captured & (~data_stock | shake_out) & (~dual_time);
 
-assign ready_insert = (~head_captured) & rst_n;
-assign ready_in = head_captured & ready_out & (~dual_time) & rst_n;
-assign shake_in = ready_in & valid_in;
-assign shake_insert = ready_insert & valid_insert;
-assign shake_out = ready_out & valid_out;
+always@(posedge clk) begin
+  if(shake_in) begin
+    data_cache <= {data_cache, data_in};
+    keep_cache <= {keep_cache, keep_in};
+	if(~header_added) begin
+	  data_cache <= {data_insert_reg, data_in};
+	  keep_cache <= {keep_insert_reg, keep_in};
+	end
+  end
+  else if(dual_time & shake_out) begin
+    data_cache <= data_cache << DATA_WD;
+    keep_cache <= keep_cache << DATA_BYTE_WD;
+  end
+end
 
-// 缓存data insert信号
+always@(posedge clk or negedge rst_n) begin
+  if(~rst_n | last_in) begin
+    header_captured <= 0;
+  end
+  else if(shake_insert) begin
+    header_captured <= 1;
+  end
+end
+
 always@(posedge clk or negedge rst_n) begin
   if(~rst_n) begin
-    data_insert_cache <= 0;
-    byte_insert_cnt_reg <= 0;
-    keep_insert_cache <= 0;
+    data_stock <= 0;
   end
-  else if(shake_insert) begin			
-    data_insert_cache <= data_insert;
-    byte_insert_cnt_reg <= byte_insert_cnt;
-	keep_insert_cache <= keep_insert;
+  else if(shake_in) begin
+    data_stock <= 1;
   end
-end
-
-// 缓存data in信号
-always@(posedge clk or negedge rst_n) begin
-  if(~rst_n) begin
-    data_in_cache <= 0;
-	keep_in_cache <= 0;
-  end
-  else if(shake_in | (shake_out & dual_time)) begin	
-    data_in_cache <= data_in;
-	keep_in_cache <= keep_in;
+  else if(shake_out) begin
+    data_stock <= 0;
   end
 end
 
-// valid_out
-always@(posedge clk or negedge rst_n) begin
-  if(~rst_n)
-    valid_out <= 0;
-  else if(shake_in)
-    valid_out <= 1;
-  else if(shake_out)
-    valid_out <= 0;
-	if(dual_time)
-	  valid_out <= 1;
-end
+always@(posedge clk) shake_in_d <= shake_in;
 
-// keep_out and data_out
-always@(posedge clk or negedge rst_n) begin
-  if(~rst_n) begin
-    last_out <= 0;
-  end
-  else begin
-    if(shake_in) begin
-      if(~head_added) begin
-        keep_out <= {keep_insert_cache, keep_in} >> byte_insert_cnt_real;
-        data_out <= {data_insert_cache, data_in} >> header_valid_bit; 
-      end
-      else begin
-        keep_out <= {keep_in_cache, keep_in} >> byte_insert_cnt_real;	
-	    data_out <= {data_in_cache, data_in} >> header_valid_bit;
-        last_out <= (keep_in << (DATA_WD - byte_insert_cnt_real) == 0);
-      end
-    end
-    else if(shake_out & dual_time) begin
-      keep_out <= {keep_in_cache, 4'b0} >> byte_insert_cnt_real;
-      data_out <= {data_in_cache, data_in} >> header_valid_bit; 
-      last_out <= 1;	
-    end
-    if(last_out & shake_out)
-      last_out <= 0;
-  end
-end
-
-// head_captured: insert握手后拉高，last_in握手后拉低
-always@(posedge clk or negedge rst_n) begin
-  if(~rst_n)
-    head_captured <= 0;   
-  else begin
-    if(last_in & shake_in)
-      head_captured <= 0;
-    else if(shake_insert)
-      head_captured <= 1;  
-  end
-end
-
-// head_added: 伴随last_out拉低，shake_in后拉高: 在head输出的同时拉高
 always@(*) begin
-  if(~rst_n | last_out)
-    head_added <= 0;
-  else if(shake_in_d1) 
-    head_added <= 1;
+  if(~rst_n | (last_out & shake_out)) begin
+    header_added <= 0;
+  end
+  else if(shake_in_d) begin
+    header_added <= 1;
+  end
 end
 
-// dual_time: 伴随last_out握手拉低，last_in握手之后拉高
-always@(*) begin
+always@(posedge clk) begin
+  if(~header_added) begin
+    byte_insert_cnt_real <= byte_insert_cnt_reg;
+  end
+end
+
+always@(posedge clk) begin
+  if(shake_insert) begin
+    data_insert_reg <= data_insert;
+	keep_insert_reg <= keep_insert;
+	byte_insert_cnt_reg <= byte_insert_cnt;
+  end
+end
+
+// 2.数据输出部分
+
+localparam BIT_CNT_DATA = $clog2(DATA_WD)+1;
+
+wire last_in_real = last_in & valid_in;
+wire [DATA_BYTE_WD-1:0] cnst = 0;
+wire [DATA_WD-1:0] bit_insert_cnt = byte_insert_cnt_real << 3; // head的有效bit
+wire [BYTE_CNT_WD-1:0] disbyte_insert_cnt = DATA_BYTE_WD-byte_insert_cnt_real; //head的无效byte
+wire [DATA_WD-1:0] disbit_insert_cnt = disbyte_insert_cnt << 3; // head的无效bit
+reg dual_time;
+
+assign valid_out = data_stock | last_out;
+assign data_out = data_cache >> bit_insert_cnt;
+assign keep_out = keep_cache >> byte_insert_cnt_real;
+assign last_out = ((keep_cache[DATA_BYTE_WD-1:0] << disbyte_insert_cnt) == cnst) & dual_time;
+
+always@(posedge clk or negedge rst_n) begin
   if(~rst_n | (last_out & shake_out))
     dual_time <= 0;
-  else if(last_in_d1 & shake_in_d1)
+  else if(last_in & shake_in)
     dual_time <= 1;
-end
+end	
 
-// byte_insert_cnt_real
-always@(*) begin
-  if(~head_added)
-    byte_insert_cnt_real <= byte_insert_cnt_reg;
-end
-
-// 打拍信号
-always@(posedge clk) begin
-  last_in_d1 <= last_in;
-  shake_in_d1 <= shake_in;
-end
-	
 endmodule

@@ -135,10 +135,7 @@ reg [7:0] data_input_cache[0:1151];
 reg [7:0] data_output[0:1151];
 reg [DATA_BYTE_WD-1:0] keep_in_test, keep_insert_test, keep_out_test;
 
-integer cnt_out, cnt_in, cnt_in_cache, cnt_test_num, i, j;
-
-// output result
-integer byte_data_out_cnt;
+integer cnt_out, cnt_in, cnt_in_cache, cnt_test_num, i, j, byte_data_out_cnt;
 
 always@(posedge clk or negedge rst_n) begin
   if(~rst_n)

@@ -157,7 +157,7 @@ end
 
 // byte_insert_cnt_real
 always@(*) begin
-  if(~head_added)
+  if(~head_added) // 用head_added拉高来更新 byte_insert_cnt 的记录值
     byte_insert_cnt_real <= byte_insert_cnt_reg;
 end
 
