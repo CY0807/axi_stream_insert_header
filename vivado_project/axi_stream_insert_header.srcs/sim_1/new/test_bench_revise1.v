@@ -85,7 +85,7 @@ always@(posedge clk) begin
     cnt_data_len <= cnt_data_len + 1;	
     if(cnt_data_len == data_len-1) begin
   	  cnt_data_len <= 0;
-  	  data_len <= {$random(seed)} % 256 + 1;
+  	  data_len <= {$random(seed)} % 256 + 2;
     end  
   end
 end
@@ -179,7 +179,7 @@ always@(posedge clk or rst_n) begin
 	end
 	cnt_in = cnt_in + byte_data_in_cnt;
 	if(last_in) begin
-	  keep_in_test = keep_in;
+	  keep_in_test <= keep_in;
 	  # (CLK_TIME * 0.8);
 	  cnt_in = 0;
 	end
@@ -188,21 +188,8 @@ end
 
 // print
 always@(posedge clk) begin
-  // print input data
-  if(last_in & ready_in & valid_in) begin
-    # 1
-    cnt_in_cache = cnt_in;
-    $display("\ntest repeat times: %d", cnt_test_num);
-	$display("input head and data:");
-	for(i=0; i<cnt_in; i=i+1) begin	 
-      data_input_cache[i] = data_input[i];	
-	  $write("%H", data_input[i]);
-	end
-	$display("\nkeep_insert: 4'b%b", keep_insert_test);
-	$display("keep_in: 4'b%b", keep_in_test);
-  end
   // print output data
-  else if(last_out & ready_out & valid_out) begin
+  if(last_out & ready_out & valid_out) begin
     # 1
     $display("output head and data:");
 	for(i=0; i<cnt_out; i=i+1) begin	  
@@ -227,6 +214,22 @@ always@(posedge clk) begin
 	  $finish;
 	end
   end
+  
+  // print input data
+  if(last_in & ready_in & valid_in) begin
+    # 1
+    cnt_in_cache = cnt_in;
+    $display("\ntest repeat times: %d", cnt_test_num);
+	$display("input head and data:");
+	for(i=0; i<cnt_in; i=i+1) begin	 
+      data_input_cache[i] = data_input[i];	
+	  $write("%H", data_input[i]);
+	end
+	$display("\nkeep_insert: 4'b%b", keep_insert_test);
+	$display("keep_in: 4'b%b", keep_in_test);
+  end
+  
+  
 end
 
 

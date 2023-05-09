@@ -1,6 +1,5 @@
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sources_1/new/axi_stream_insert_header.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module axi_stream_insert_header
-WARNING: [VRFC 10-3380] identifier 'dual_time' is used before its declaration [D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sources_1/new/axi_stream_insert_header.v:66]
-WARNING: [VRFC 10-3380] identifier 'dual_time' is used before its declaration [D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sources_1/new/axi_stream_insert_header.v:77]
+WARNING: [VRFC 10-3380] identifier 'dual_time_reg' is used before its declaration [D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sources_1/new/axi_stream_insert_header.v:64]
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sim_1/new/test_bench_revise1.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module test_bench_revise1

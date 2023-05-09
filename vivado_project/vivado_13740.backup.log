@@ -1,0 +1,1255 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue May  9 19:48:21 2023
+# Process ID: 13740
+# Current directory: D:/github_repo/axi_stream_insert_header/vivado_project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13544 D:\github_repo\axi_stream_insert_header\vivado_project\axi_stream_insert_header.xpr
+# Log file: D:/github_repo/axi_stream_insert_header/vivado_project/vivado.log
+# Journal file: D:/github_repo/axi_stream_insert_header/vivado_project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/SoftwareRoot/Vivado2019.1/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 838.789 ; gain = 169.355
+update_compile_order -fileset sources_1
+set_property top test_bench_tmp [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_bench_tmp' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj test_bench_tmp_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sources_1/new/axi_stream_insert_header.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_stream_insert_header
+WARNING: [VRFC 10-3380] identifier 'dual_time' is used before its declaration [D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sources_1/new/axi_stream_insert_header.v:64]
+ERROR: [VRFC 10-2951] 'data_in_reg' is not a constant [D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sources_1/new/axi_stream_insert_header.v:130]
+ERROR: [VRFC 10-2951] 'keep_in_reg' is not a constant [D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sources_1/new/axi_stream_insert_header.v:131]
+ERROR: [VRFC 10-2865] module 'axi_stream_insert_header' ignored due to previous errors [D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sources_1/new/axi_stream_insert_header.v:23]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_bench_tmp' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj test_bench_tmp_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sources_1/new/axi_stream_insert_header.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_stream_insert_header
+WARNING: [VRFC 10-3380] identifier 'dual_time' is used before its declaration [D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sources_1/new/axi_stream_insert_header.v:64]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sim_1/new/test_bench_tmp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_bench_tmp
+INFO: [VRFC 10-311] analyzing module test_bench_tmp
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'test_bench_tmp' [D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sim_1/new/test_bench_tmp.v:50]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+"xelab -wto f7df666d4a594860bf7766b7885383d2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_tmp_behav xil_defaultlib.test_bench_tmp xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/SoftwareRoot/Vivado2019.1/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto f7df666d4a594860bf7766b7885383d2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_tmp_behav xil_defaultlib.test_bench_tmp xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.axi_stream_insert_header_default
+Compiling module xil_defaultlib.test_bench_tmp
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_bench_tmp_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "test_bench_tmp_behav -key {Behavioral:sim_1:Functional:test_bench_tmp} -tclbatch {test_bench_tmp.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source test_bench_tmp.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 200 ns : File "D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sim_1/new/test_bench_tmp.v" Line 127
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_bench_tmp_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 914.793 ; gain = 11.266
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/test_bench_tmp/axi_stream_insert_header_inst}} 
+run all
+$finish called at time : 200 ns : File "D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sim_1/new/test_bench_tmp.v" Line 127
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_bench_tmp' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj test_bench_tmp_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sources_1/new/axi_stream_insert_header.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_stream_insert_header
+WARNING: [VRFC 10-3380] identifier 'dual_time' is used before its declaration [D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sources_1/new/axi_stream_insert_header.v:64]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sim_1/new/test_bench_tmp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_bench_tmp
+INFO: [VRFC 10-311] analyzing module test_bench_tmp
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'test_bench_tmp' [D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sim_1/new/test_bench_tmp.v:50]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+"xelab -wto f7df666d4a594860bf7766b7885383d2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_tmp_behav xil_defaultlib.test_bench_tmp xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/SoftwareRoot/Vivado2019.1/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto f7df666d4a594860bf7766b7885383d2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_tmp_behav xil_defaultlib.test_bench_tmp xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.axi_stream_insert_header_default
+Compiling module xil_defaultlib.test_bench_tmp
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_bench_tmp_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "test_bench_tmp_behav -key {Behavioral:sim_1:Functional:test_bench_tmp} -tclbatch {test_bench_tmp.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source test_bench_tmp.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 200 ns : File "D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sim_1/new/test_bench_tmp.v" Line 127
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_bench_tmp_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+current_wave_config {Untitled 2}
+Untitled 2
+add_wave {{/test_bench_tmp/axi_stream_insert_header_inst}} 
+run all
+$finish called at time : 200 ns : File "D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sim_1/new/test_bench_tmp.v" Line 127
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_bench_tmp' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj test_bench_tmp_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+"xelab -wto f7df666d4a594860bf7766b7885383d2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_tmp_behav xil_defaultlib.test_bench_tmp xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/SoftwareRoot/Vivado2019.1/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto f7df666d4a594860bf7766b7885383d2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_tmp_behav xil_defaultlib.test_bench_tmp xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "test_bench_tmp_behav -key {Behavioral:sim_1:Functional:test_bench_tmp} -tclbatch {test_bench_tmp.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source test_bench_tmp.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 200 ns : File "D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sim_1/new/test_bench_tmp.v" Line 127
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_bench_tmp_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_bench_tmp' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj test_bench_tmp_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sources_1/new/axi_stream_insert_header.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_stream_insert_header
+WARNING: [VRFC 10-3380] identifier 'dual_time' is used before its declaration [D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sources_1/new/axi_stream_insert_header.v:64]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sim_1/new/test_bench_tmp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_bench_tmp
+INFO: [VRFC 10-311] analyzing module test_bench_tmp
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'test_bench_tmp' [D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sim_1/new/test_bench_tmp.v:50]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+"xelab -wto f7df666d4a594860bf7766b7885383d2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_tmp_behav xil_defaultlib.test_bench_tmp xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/SoftwareRoot/Vivado2019.1/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto f7df666d4a594860bf7766b7885383d2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_tmp_behav xil_defaultlib.test_bench_tmp xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.axi_stream_insert_header_default
+Compiling module xil_defaultlib.test_bench_tmp
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_bench_tmp_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "test_bench_tmp_behav -key {Behavioral:sim_1:Functional:test_bench_tmp} -tclbatch {test_bench_tmp.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source test_bench_tmp.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 200 ns : File "D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sim_1/new/test_bench_tmp.v" Line 127
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_bench_tmp_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+current_wave_config {Untitled 4}
+Untitled 4
+add_wave {{/test_bench_tmp/axi_stream_insert_header_inst}} 
+run all
+$finish called at time : 200 ns : File "D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sim_1/new/test_bench_tmp.v" Line 127
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_bench_tmp' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj test_bench_tmp_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sources_1/new/axi_stream_insert_header.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_stream_insert_header
+WARNING: [VRFC 10-3380] identifier 'dual_time' is used before its declaration [D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sources_1/new/axi_stream_insert_header.v:64]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sim_1/new/test_bench_tmp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_bench_tmp
+INFO: [VRFC 10-311] analyzing module test_bench_tmp
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'test_bench_tmp' [D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sim_1/new/test_bench_tmp.v:50]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+"xelab -wto f7df666d4a594860bf7766b7885383d2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_tmp_behav xil_defaultlib.test_bench_tmp xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/SoftwareRoot/Vivado2019.1/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto f7df666d4a594860bf7766b7885383d2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_tmp_behav xil_defaultlib.test_bench_tmp xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.axi_stream_insert_header_default
+Compiling module xil_defaultlib.test_bench_tmp
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_bench_tmp_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "test_bench_tmp_behav -key {Behavioral:sim_1:Functional:test_bench_tmp} -tclbatch {test_bench_tmp.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source test_bench_tmp.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 200 ns : File "D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sim_1/new/test_bench_tmp.v" Line 127
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_bench_tmp_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_bench_tmp' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj test_bench_tmp_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sources_1/new/axi_stream_insert_header.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_stream_insert_header
+WARNING: [VRFC 10-3380] identifier 'dual_time' is used before its declaration [D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sources_1/new/axi_stream_insert_header.v:64]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sim_1/new/test_bench_tmp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_bench_tmp
+INFO: [VRFC 10-311] analyzing module test_bench_tmp
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'test_bench_tmp' [D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sim_1/new/test_bench_tmp.v:50]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+"xelab -wto f7df666d4a594860bf7766b7885383d2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_tmp_behav xil_defaultlib.test_bench_tmp xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/SoftwareRoot/Vivado2019.1/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto f7df666d4a594860bf7766b7885383d2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_tmp_behav xil_defaultlib.test_bench_tmp xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.axi_stream_insert_header_default
+Compiling module xil_defaultlib.test_bench_tmp
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_bench_tmp_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "test_bench_tmp_behav -key {Behavioral:sim_1:Functional:test_bench_tmp} -tclbatch {test_bench_tmp.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source test_bench_tmp.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 200 ns : File "D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sim_1/new/test_bench_tmp.v" Line 127
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_bench_tmp_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+set_property top test_bench_revise1 [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_bench_revise1' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj test_bench_revise1_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sources_1/new/axi_stream_insert_header.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_stream_insert_header
+WARNING: [VRFC 10-3380] identifier 'dual_time' is used before its declaration [D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sources_1/new/axi_stream_insert_header.v:64]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sim_1/new/test_bench_revise1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_bench_revise1
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+"xelab -wto f7df666d4a594860bf7766b7885383d2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_revise1_behav xil_defaultlib.test_bench_revise1 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/SoftwareRoot/Vivado2019.1/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto f7df666d4a594860bf7766b7885383d2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_revise1_behav xil_defaultlib.test_bench_revise1 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.axi_stream_insert_header_default
+Compiling module xil_defaultlib.test_bench_revise1
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_bench_revise1_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "test_bench_revise1_behav -key {Behavioral:sim_1:Functional:test_bench_revise1} -tclbatch {test_bench_revise1.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source test_bench_revise1.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+***** Start	Simulation *****
+Random Seed =           0
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_bench_revise1_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+set_property top test_bench_tmp [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_bench_tmp' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj test_bench_tmp_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sources_1/new/axi_stream_insert_header.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_stream_insert_header
+WARNING: [VRFC 10-3380] identifier 'dual_time' is used before its declaration [D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sources_1/new/axi_stream_insert_header.v:64]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sim_1/new/test_bench_tmp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_bench_tmp
+INFO: [VRFC 10-311] analyzing module test_bench_tmp
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'test_bench_tmp' [D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sim_1/new/test_bench_tmp.v:50]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+"xelab -wto f7df666d4a594860bf7766b7885383d2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_tmp_behav xil_defaultlib.test_bench_tmp xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/SoftwareRoot/Vivado2019.1/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto f7df666d4a594860bf7766b7885383d2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_tmp_behav xil_defaultlib.test_bench_tmp xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.axi_stream_insert_header_default
+Compiling module xil_defaultlib.test_bench_tmp
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_bench_tmp_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "test_bench_tmp_behav -key {Behavioral:sim_1:Functional:test_bench_tmp} -tclbatch {test_bench_tmp.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source test_bench_tmp.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 200 ns : File "D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sim_1/new/test_bench_tmp.v" Line 127
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_bench_tmp_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+current_wave_config {Untitled 8}
+Untitled 8
+add_wave {{/test_bench_tmp/axi_stream_insert_header_inst}} 
+run all
+$finish called at time : 200 ns : File "D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sim_1/new/test_bench_tmp.v" Line 127
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_bench_tmp' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj test_bench_tmp_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sources_1/new/axi_stream_insert_header.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_stream_insert_header
+WARNING: [VRFC 10-3380] identifier 'dual_time' is used before its declaration [D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sources_1/new/axi_stream_insert_header.v:64]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sim_1/new/test_bench_tmp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_bench_tmp
+INFO: [VRFC 10-311] analyzing module test_bench_tmp
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'test_bench_tmp' [D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sim_1/new/test_bench_tmp.v:50]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+"xelab -wto f7df666d4a594860bf7766b7885383d2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_tmp_behav xil_defaultlib.test_bench_tmp xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/SoftwareRoot/Vivado2019.1/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto f7df666d4a594860bf7766b7885383d2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_tmp_behav xil_defaultlib.test_bench_tmp xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.axi_stream_insert_header_default
+Compiling module xil_defaultlib.test_bench_tmp
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_bench_tmp_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "test_bench_tmp_behav -key {Behavioral:sim_1:Functional:test_bench_tmp} -tclbatch {test_bench_tmp.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source test_bench_tmp.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 200 ns : File "D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sim_1/new/test_bench_tmp.v" Line 127
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_bench_tmp_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 1039.508 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+set_property top test_bench_revise1 [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_bench_revise1' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj test_bench_revise1_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+"xelab -wto f7df666d4a594860bf7766b7885383d2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_revise1_behav xil_defaultlib.test_bench_revise1 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/SoftwareRoot/Vivado2019.1/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto f7df666d4a594860bf7766b7885383d2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_revise1_behav xil_defaultlib.test_bench_revise1 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.axi_stream_insert_header_default
+Compiling module xil_defaultlib.test_bench_revise1
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_bench_revise1_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "test_bench_revise1_behav -key {Behavioral:sim_1:Functional:test_bench_revise1} -tclbatch {test_bench_revise1.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source test_bench_revise1.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+***** Start	Simulation *****
+Random Seed =           0
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_bench_revise1_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+run all
+
+test repeat times:           0
+input head and data:
+84d609c0895e8172aff7e5793069f296ab582d0573870a359fdd6be7c572cfec4b34d8634bf9c627f2554f78d99bf147b9a18fadcbc05be8233ed04b212f96bf05007e0fd28f1fbc1488789ff2ae3fd9d292b3e59b36cbed536cdaefbe94df076fcf0e2b0eed56acb7ca596cb0b7d9a3071a4644018d888477e408433567862f3ab35e603921c0e7c3b6cf0b9409179ab48835e2e5
+keep_insert: 4'b0111
+keep_in: 4'b1100
+output head and data:
+84d609c0895e8172aff7e5793069f296ab582d0573870a359fdd6be7c572cfec4b34d8634bf9c627f2554f78d99bf147b9a18fadcbc05be8233ed04b212f96bf05007e0fd28f1fbc1488789ff2ae3fd9d292b3e59b36cbed536cdaefbe94df076fcf0e2b0eed56acb7ca596cb0b7d9a3071a4644018d888477e408433567862f3ab35e603921c0e7c3b6cf0b9409179ae5
+keep_out: 4'b1000
+Error: check result
+$finish called at time : 1091 ns : File "D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sim_1/new/test_bench_revise1.v" Line 216
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_bench_revise1' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj test_bench_revise1_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sources_1/new/axi_stream_insert_header.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_stream_insert_header
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sim_1/new/test_bench_revise1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_bench_revise1
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+"xelab -wto f7df666d4a594860bf7766b7885383d2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_revise1_behav xil_defaultlib.test_bench_revise1 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/SoftwareRoot/Vivado2019.1/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto f7df666d4a594860bf7766b7885383d2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_revise1_behav xil_defaultlib.test_bench_revise1 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.axi_stream_insert_header_default
+Compiling module xil_defaultlib.test_bench_revise1
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_bench_revise1_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "test_bench_revise1_behav -key {Behavioral:sim_1:Functional:test_bench_revise1} -tclbatch {test_bench_revise1.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source test_bench_revise1.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+***** Start	Simulation *****
+Random Seed =           0
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_bench_revise1_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+run all
+run: Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 1081.574 ; gain = 0.000
+run all
+run: Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1081.574 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+set_property top test_bench_tmp [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_bench_tmp' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj test_bench_tmp_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sources_1/new/axi_stream_insert_header.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_stream_insert_header
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sim_1/new/test_bench_tmp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_bench_tmp
+INFO: [VRFC 10-311] analyzing module test_bench_tmp
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'test_bench_tmp' [D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sim_1/new/test_bench_tmp.v:50]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+"xelab -wto f7df666d4a594860bf7766b7885383d2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_tmp_behav xil_defaultlib.test_bench_tmp xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/SoftwareRoot/Vivado2019.1/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto f7df666d4a594860bf7766b7885383d2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_tmp_behav xil_defaultlib.test_bench_tmp xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.axi_stream_insert_header_default
+Compiling module xil_defaultlib.test_bench_tmp
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_bench_tmp_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "test_bench_tmp_behav -key {Behavioral:sim_1:Functional:test_bench_tmp} -tclbatch {test_bench_tmp.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source test_bench_tmp.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 200 ns : File "D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sim_1/new/test_bench_tmp.v" Line 127
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_bench_tmp_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+set_property top test_bench_revise1 [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_bench_revise1' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj test_bench_revise1_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+"xelab -wto f7df666d4a594860bf7766b7885383d2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_revise1_behav xil_defaultlib.test_bench_revise1 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/SoftwareRoot/Vivado2019.1/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto f7df666d4a594860bf7766b7885383d2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_revise1_behav xil_defaultlib.test_bench_revise1 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.axi_stream_insert_header_default
+Compiling module xil_defaultlib.test_bench_revise1
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_bench_revise1_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "test_bench_revise1_behav -key {Behavioral:sim_1:Functional:test_bench_revise1} -tclbatch {test_bench_revise1.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source test_bench_revise1.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+***** Start	Simulation *****
+Random Seed =           0
+
+test repeat times:           0
+input head and data:
+84d609c0895e8172aff7e5793069f296ab582d0573870a359fdd6bd7563eae118449235b0265b642f241851d06333a31230762dbcd60b7adcbc05be8233ed04b212f96bf05007e0fd28f1fbc1488789ff2ae3fd9d292b37bf8fdf7f682e2ed3cf119792779e94e5b6fb9b6acb7ca596cb0b7d9a3071a4644018d888477e408433567862f3ab35e603921c0436157863ced2b79437791
+keep_insert: 4'b0111
+keep_in: 4'b1110
+output head and data:
+84d609c0895e8172aff7e5793069f29673870a359fdd6bd7563eae118449235b0265b642f241851d230762dbcd60b7adcbc05be8233ed04b212f96bf05007e0fd28f1fbcf2ae3fd9d292b37bf8fdf7f6f119792779e94e5b6fb9b6acb7ca596cb0b7d9a3071a4644018d888477e408433ab35e603921c0436157863c7791
+keep_out: 4'b1100
+Error: check result
+$finish called at time : 951 ns : File "D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sim_1/new/test_bench_revise1.v" Line 216
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_bench_revise1_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+run all
+Error: check result
+$finish called at time : 951 ns : File "D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sim_1/new/test_bench_revise1.v" Line 221
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+set_property top test_bench_tmp [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_bench_tmp' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj test_bench_tmp_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+"xelab -wto f7df666d4a594860bf7766b7885383d2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_tmp_behav xil_defaultlib.test_bench_tmp xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/SoftwareRoot/Vivado2019.1/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto f7df666d4a594860bf7766b7885383d2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_tmp_behav xil_defaultlib.test_bench_tmp xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "test_bench_tmp_behav -key {Behavioral:sim_1:Functional:test_bench_tmp} -tclbatch {test_bench_tmp.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source test_bench_tmp.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 200 ns : File "D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sim_1/new/test_bench_tmp.v" Line 127
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_bench_tmp_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1081.574 ; gain = 0.000
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+current_wave_config {Untitled 14}
+Untitled 14
+add_wave {{/test_bench_tmp/axi_stream_insert_header_inst}} 
+run all
+$finish called at time : 200 ns : File "D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sim_1/new/test_bench_tmp.v" Line 127
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_bench_tmp' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj test_bench_tmp_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sources_1/new/axi_stream_insert_header.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_stream_insert_header
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sim_1/new/test_bench_tmp.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_bench_tmp
+INFO: [VRFC 10-311] analyzing module test_bench_tmp
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'test_bench_tmp' [D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sim_1/new/test_bench_tmp.v:50]
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+"xelab -wto f7df666d4a594860bf7766b7885383d2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_tmp_behav xil_defaultlib.test_bench_tmp xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/SoftwareRoot/Vivado2019.1/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto f7df666d4a594860bf7766b7885383d2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_tmp_behav xil_defaultlib.test_bench_tmp xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.axi_stream_insert_header_default
+Compiling module xil_defaultlib.test_bench_tmp
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_bench_tmp_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "test_bench_tmp_behav -key {Behavioral:sim_1:Functional:test_bench_tmp} -tclbatch {test_bench_tmp.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source test_bench_tmp.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+$finish called at time : 200 ns : File "D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sim_1/new/test_bench_tmp.v" Line 127
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_bench_tmp_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+set_property top test_bench_revise1 [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_bench_revise1' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj test_bench_revise1_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+"xelab -wto f7df666d4a594860bf7766b7885383d2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_revise1_behav xil_defaultlib.test_bench_revise1 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/SoftwareRoot/Vivado2019.1/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto f7df666d4a594860bf7766b7885383d2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_revise1_behav xil_defaultlib.test_bench_revise1 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.axi_stream_insert_header_default
+Compiling module xil_defaultlib.test_bench_revise1
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_bench_revise1_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "test_bench_revise1_behav -key {Behavioral:sim_1:Functional:test_bench_revise1} -tclbatch {test_bench_revise1.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source test_bench_revise1.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+***** Start	Simulation *****
+Random Seed =           0
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_bench_revise1_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+run all
+
+test repeat times:           0
+input head and data:
+84d609c0895e8172aff7e5793069f296ab582d0573870a359fdd6be7c572cfec4b34d8634bf9c627f2554f78d99bf147b9a18fadcbc05be8233ed04b212f96bf05007e0fd28f1fbc1488789ff2ae3fd9d292b3e59b36cbed536cdaefbe94df076fcf0e2b0eed56acb7ca596cb0b7d9a3071a4644018d888477e408433567862f3ab35e603921c0e7c3b6cf0b9409179ab48835e2e5
+keep_insert: 4'b0111
+keep_in: 4'b1100
+output head and data:
+84d609c0895e8172aff7e5793069f296ab582d0573870a359fdd6be7c572cfec4b34d8634bf9c627f2554f78d99bf147b9a18fadcbc05be8233ed04b212f96bf05007e0fd28f1fbc1488789ff2ae3fd9d292b3e59b36cbed536cdaefbe94df076fcf0e2b0eed56acb7ca596cb0b7d9a3071a4644018d888477e408433567862f3ab35e603921c0e7c3b6cf0b9409179ae5
+keep_out: 4'b1000
+Error: check result
+$finish called at time : 1091 ns : File "D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sim_1/new/test_bench_revise1.v" Line 216
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+current_wave_config {Untitled 16}
+Untitled 16
+add_wave {{/test_bench_revise1/axi_stream_insert_header_inst}} 
+run all
+***** Start	Simulation *****
+Random Seed =           0
+
+test repeat times:           0
+input head and data:
+84d609c0895e8172aff7e5793069f296ab582d0573870a359fdd6be7c572cfec4b34d8634bf9c627f2554f78d99bf147b9a18fadcbc05be8233ed04b212f96bf05007e0fd28f1fbc1488789ff2ae3fd9d292b3e59b36cbed536cdaefbe94df076fcf0e2b0eed56acb7ca596cb0b7d9a3071a4644018d888477e408433567862f3ab35e603921c0e7c3b6cf0b9409179ab48835e2e5
+keep_insert: 4'b0111
+keep_in: 4'b1100
+output head and data:
+84d609c0895e8172aff7e5793069f296ab582d0573870a359fdd6be7c572cfec4b34d8634bf9c627f2554f78d99bf147b9a18fadcbc05be8233ed04b212f96bf05007e0fd28f1fbc1488789ff2ae3fd9d292b3e59b36cbed536cdaefbe94df076fcf0e2b0eed56acb7ca596cb0b7d9a3071a4644018d888477e408433567862f3ab35e603921c0e7c3b6cf0b9409179ae5
+keep_out: 4'b1000
+Error: check result
+$finish called at time : 1091 ns : File "D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sim_1/new/test_bench_revise1.v" Line 216
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_bench_revise1' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj test_bench_revise1_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sources_1/new/axi_stream_insert_header.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_stream_insert_header
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sim_1/new/test_bench_revise1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_bench_revise1
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+"xelab -wto f7df666d4a594860bf7766b7885383d2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_revise1_behav xil_defaultlib.test_bench_revise1 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/SoftwareRoot/Vivado2019.1/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto f7df666d4a594860bf7766b7885383d2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_revise1_behav xil_defaultlib.test_bench_revise1 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.axi_stream_insert_header_default
+Compiling module xil_defaultlib.test_bench_revise1
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_bench_revise1_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "test_bench_revise1_behav -key {Behavioral:sim_1:Functional:test_bench_revise1} -tclbatch {test_bench_revise1.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source test_bench_revise1.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+***** Start	Simulation *****
+Random Seed =           0
+
+test repeat times:           0
+input head and data:
+84d609c0895e8172aff7e547ecdb8fb1ef62638983b813359fdd6bd7563eae118449235b0265b642f241851d06333a31230762dbcd60b7adcbc05be8233ed04b212f96bf05007e0fd28f1fbc1488789ff2ae3fd9d292b37bf8fdf72d28db5aed536cdaefbe94dfe8740cd02779e94e5b6fb9b6acb7ca596cb0b7d9653b49cada6ebab4975c9c2e8e37901cb855c4702f3ab35e60
+keep_insert: 4'b0111
+keep_in: 4'b1000
+output head and data:
+3ab35e60
+keep_out: 4'b1111
+Error: check result
+$finish called at time : 821 ns : File "D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sim_1/new/test_bench_revise1.v" Line 216
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_bench_revise1_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+run all
+Error: check result
+$finish called at time : 821 ns : File "D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sim_1/new/test_bench_revise1.v" Line 221
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_bench_revise1' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj test_bench_revise1_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sources_1/new/axi_stream_insert_header.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_stream_insert_header
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sim_1/new/test_bench_revise1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_bench_revise1
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+"xelab -wto f7df666d4a594860bf7766b7885383d2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_revise1_behav xil_defaultlib.test_bench_revise1 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/SoftwareRoot/Vivado2019.1/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto f7df666d4a594860bf7766b7885383d2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_revise1_behav xil_defaultlib.test_bench_revise1 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.axi_stream_insert_header_default
+Compiling module xil_defaultlib.test_bench_revise1
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_bench_revise1_behav
+INFO: [Common 17-344] 'run_program' was cancelled
+INFO: [Vivado 12-5357] 'elaborate' step aborted
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_bench_revise1' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj test_bench_revise1_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+"xelab -wto f7df666d4a594860bf7766b7885383d2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_revise1_behav xil_defaultlib.test_bench_revise1 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/SoftwareRoot/Vivado2019.1/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto f7df666d4a594860bf7766b7885383d2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_revise1_behav xil_defaultlib.test_bench_revise1 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "test_bench_revise1_behav -key {Behavioral:sim_1:Functional:test_bench_revise1} -tclbatch {test_bench_revise1.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source test_bench_revise1.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+***** Start	Simulation *****
+Random Seed =           0
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_bench_revise1_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+run all
+
+test repeat times:           0
+input head and data:
+84d609c0895e8172aff7e5e77696ceb1ef6263a9a7d653d7563eae0509650a5b0265b627f2554f6c9c4bd9dbcd60b7a4ae3249061d7f0cbf05007ee9ebf6d39ff2ae3fd9d292b3f3091ae6b29fb6652231ff442b0eed56acb7ca59b6a4266dda6ebab48477e408433567862f3ab35e603921c03ced2b794377918660b175c1f622e6ecf33466e69c6de638e3b7aec77d6df5fa47
+keep_insert: 4'b0111
+keep_in: 4'b1000
+output head and data:
+84d609c0895e8172aff7e5e77696ceb1ef6263a9a7d653d7563eae0509650a5b0265b627f2554f6c9c4bd9dbcd60b7a4ae3249061d7f0cbf05007ee9ebf6d39ff2ae3fd9d292b3f3091ae6b29fb6652231ff442b0eed56acb7ca59b6a4266dda6ebab48477e408433567862f3ab35e603921c03ced2b794377918660b175c1f622e6ecf33466e69c6de638e3b7aec77d
+keep_out: 4'b0000
+Error: check result
+$finish called at time : 1371 ns : File "D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sim_1/new/test_bench_revise1.v" Line 216
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_bench_revise1' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj test_bench_revise1_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sources_1/new/axi_stream_insert_header.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_stream_insert_header
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sim_1/new/test_bench_revise1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test_bench_revise1
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+"xelab -wto f7df666d4a594860bf7766b7885383d2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_revise1_behav xil_defaultlib.test_bench_revise1 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/SoftwareRoot/Vivado2019.1/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto f7df666d4a594860bf7766b7885383d2 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bench_revise1_behav xil_defaultlib.test_bench_revise1 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.axi_stream_insert_header_default
+Compiling module xil_defaultlib.test_bench_revise1
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_bench_revise1_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "test_bench_revise1_behav -key {Behavioral:sim_1:Functional:test_bench_revise1} -tclbatch {test_bench_revise1.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source test_bench_revise1.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+***** Start	Simulation *****
+Random Seed =           0
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_bench_revise1_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+run all
+
+test repeat times:           0
+input head and data:
+84d609c0895e8172aff7e5e77696ceb1ef6263a9a7d653d7563eae0509650a5b0265b627f2554f6c9c4bd9dbcd60b7a4ae3249061d7f0cbf05007ee9ebf6d39ff2ae3fd9d292b3f3091ae6b29fb6652231ff442b0eed56acb7ca59b6a4266dda6ebab48477e408433567862f3ab35e603921c03ced2b794377918660b175c1f622e6ecf33466e69c6de638e3b7aec77d6df5fa47
+keep_insert: 4'b0111
+keep_in: 4'b1000
+output head and data:
+84d609c0895e8172aff7e5e77696ceb1ef6263a9a7d653d7563eae0509650a5b0265b627f2554f6c9c4bd9dbcd60b7a4ae3249061d7f0cbf05007ee9ebf6d39ff2ae3fd9d292b3f3091ae6b29fb6652231ff442b0eed56acb7ca59b6a4266dda6ebab48477e408433567862f3ab35e603921c03ced2b794377918660b175c1f622e6ecf33466e69c6de638e3b7aec77d
+keep_out: 4'b0000
+Error: check result
+$finish called at time : 1371 ns : File "D:/github_repo/axi_stream_insert_header/vivado_project/axi_stream_insert_header.srcs/sim_1/new/test_bench_revise1.v" Line 216
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue May  9 21:28:16 2023...
