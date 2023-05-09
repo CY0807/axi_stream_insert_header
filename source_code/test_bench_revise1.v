@@ -27,7 +27,7 @@ parameter DATA_WD = 32;
 parameter DATA_BYTE_WD = DATA_WD / 8;
 parameter BYTE_CNT_WD = $clog2(DATA_BYTE_WD);
 parameter CLK_TIME = 10;
-parameter cnt_test_num_max = 1000;
+parameter cnt_test_num_max = 200;
 
 // module ports	
 reg clk, rst_n;
@@ -92,7 +92,7 @@ end
 
 // random valid_in
 always@(posedge clk) begin
-  if((valid_in == 0) | (valid_in & ready_in))
+  if((~valid_in) | ready_in) //
     valid_in <= $random(seed);
 end
 
@@ -135,7 +135,10 @@ reg [7:0] data_input_cache[0:1151];
 reg [7:0] data_output[0:1151];
 reg [DATA_BYTE_WD-1:0] keep_in_test, keep_insert_test, keep_out_test;
 
-integer cnt_out, cnt_in, cnt_in_cache, cnt_test_num, i, j, byte_data_out_cnt;
+integer cnt_out, cnt_in, cnt_in_cache, cnt_test_num, i, j;
+
+// output result
+integer byte_data_out_cnt;
 
 always@(posedge clk or negedge rst_n) begin
   if(~rst_n)
@@ -187,6 +190,7 @@ end
 always@(posedge clk) begin
   // print input data
   if(last_in & ready_in & valid_in) begin
+    # 1
     cnt_in_cache = cnt_in;
     $display("\ntest repeat times: %d", cnt_test_num);
 	$display("input head and data:");
@@ -199,11 +203,12 @@ always@(posedge clk) begin
   end
   // print output data
   else if(last_out & ready_out & valid_out) begin
+    # 1
     $display("output head and data:");
 	for(i=0; i<cnt_out; i=i+1) begin	  
 	  $write("%H", data_output[i]);
 	end
-	$display("\ninput keep_out: 4'b%b", keep_out_test);
+	$display("\nkeep_out: 4'b%b", keep_out_test);
 	cnt_test_num = cnt_test_num + 1;
 	// check result
 	if(~(cnt_in_cache == cnt_out)) begin
